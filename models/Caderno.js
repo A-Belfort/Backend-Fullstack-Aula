@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const entitySchema =  new mongoose.Schema(
+const cadernoSchema =  new mongoose.Schema(
     {
         titulo: {type: String },
         descricao: {type: String}
     }
 );
 
-module.exports = mongoose.model('Entity', entitySchema);
+module.exports = mongoose.model('Caderno', cadernoSchema);

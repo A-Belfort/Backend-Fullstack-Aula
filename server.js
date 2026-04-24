@@ -7,7 +7,8 @@ const cors = require('cors');
 const app = express();
 app.use(cors());
 app.use(express.json())
-app.use('/api/entity',require('./routes/entityRoutes'));
+app.use('/api/caderno',require('./routes/cadernoRoutes'));
+app.use('/api/pagina',require('./routes/paginaRoutes'))
 
 mongoose.connect(process.env.MONGO_URI).then(() => 
     app.listen(process.env.PORT, () => console.log('Servidor rodando'))
